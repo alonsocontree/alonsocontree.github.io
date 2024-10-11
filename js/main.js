@@ -18,7 +18,7 @@ let index = -1;
 btnSi.addEventListener('click', function () {
     Swal.fire({
         title: '¡Sabia que dirías que sí!',
-        text: '¡Eres mi novia ahora! 😊😘',
+        text: '¡Eres la niña de mis ojos siempre! 😊',
         imageUrl: carpetaIMG + 'image_SI.gif',
         confirmButtonText: 'Cerrar'
     }).then((result) => {
@@ -27,7 +27,7 @@ btnSi.addEventListener('click', function () {
         imagen.src =  carpetaIMG + "image_OK.gif";
         btnSi.style.display = 'none';
         btnNo.style.display = 'none';
-        mensaje.textContent = '❤ ¡Eres la casualidad más bonita que me ha pasado! 🥰❤';
+        mensaje.textContent = '❤ ¡Contigo al fin del mundo, cada vez más grandes, cada vez mejores! 🥰❤';
     });
 });
 
