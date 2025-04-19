@@ -1,27 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/main.css"/>
-  <title>¿Quieres ser mi todo?</title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abracito</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd194, #ffb347);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .mensaje {
+      position: relative;
+      z-index: 10;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .mensaje h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+
+    .bolita {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: flotar 20s infinite linear;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
 <body>
-  <div class="background-overlay"></div>
-  <div class="rosa">
-    <div class="contenedor">
-      <br />
-      <img src="./img/inicio.gif" class="imagen imagen-gif" id="imagen">
-      <h1 id="mensaje">¿Quieres ser mi novia nuevamente e intentarlo bonito?</h1>
-      <button class="boton" id="btnSi">Sí</button>
-      <button class="boton" id="btnNo">No</button>
-    </div>
+  <div class="mensaje">
+    <h1>Te mando un abracito a 11,730 km 🤭🥰</h1>
+    <div class="emoji">🌍</div>
   </div>
 
-  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <script language="javascript" type="text/javascript" src="./js/main.js"> </script>
+  <!-- Bolitas animadas -->
+  <script>
+    const colors = ['#fff', '#f5f5dc', '#ffe4b5', '#fffacd'];
+    for (let i = 0; i < 30; i++) {
+      const bolita = document.createElement('div');
+      bolita.classList.add('bolita');
+      const size = Math.random() * 20 + 10;
+      bolita.style.width = `${size}px`;
+      bolita.style.height = `${size}px`;
+      bolita.style.left = `${Math.random() * 100}%`;
+      bolita.style.animationDuration = `${10 + Math.random() * 15}s`;
+      bolita.style.background = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(bolita);
+    }
+  </script>
 </body>
-
 </html>
