@@ -1,0 +1,93 @@
+/* ==========================================================
+   1. CAPA DE ANIMACIÓN GENERAL
+   ========================================================== */
+#animation-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Detrás de la tarjeta de invitación */
+    pointer-events: none; /* Asegura que no bloquee clics */
+}
+
+/* Estilo base para elementos animados (Globos, Partículas, etc.) */
+.animated-element {
+    position: absolute;
+    /* Transiciones suaves para movimientos controlados por JS */
+    transition: transform 0.1s, opacity 0.5s; 
+}
+
+/* ==========================================================
+   2. TEMAS VISUALES GLOBALES (Controlado por main.js)
+   ========================================================== */
+
+/* --- TEMA TARDE (4:00 PM) --- */
+body.fiesta-tarde {
+    /* Si quieres un fondo menos oscuro para la tarde */
+    background-color: #0A0A0A; 
+}
+
+/* --- TEMA NOCHE (9:00 PM) --- */
+body.fiesta-noche {
+    /* Oscuridad profunda para resaltar los brillos */
+    background-color: #000000; 
+}
+
+
+/* ==========================================================
+   3. ANIMACIONES CSS: Globos (Tarde)
+   ========================================================== */
+/* Aquí definiremos la animación de flotación para globos */
+
+/* Solo aplicable si el body tiene la clase fiesta-tarde */
+body.fiesta-tarde .balloon {
+    background-color: #FFC0CB; /* Globo de color rosa pálido */
+    width: 30px;
+    height: 40px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Forma de globo */
+    opacity: 0.8;
+    animation: floatUp 8s ease-in infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20vh) rotate(5deg);
+        opacity: 0;
+    }
+}
+
+
+/* ==========================================================
+   4. ANIMACIONES CSS: Cohetes/Fuegos Artificiales (Noche)
+   ========================================================== */
+/* Estas animaciones serán más intensas y plateadas/blancas */
+
+/* Solo aplicable si el body tiene la clase fiesta-noche */
+body.fiesta-noche .sparkle {
+    width: 2px;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    /* Añadimos un brillo */
+    box-shadow: 0 0 5px #C0C0C0; 
+    animation: twinkle 1.5s linear infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡26 Años de Alonso! - Invitación</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/theme-anims.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="animation-layer"></div>
+
+    <div id="invitation-card">
+                
+        <h1 id="greeting" class="loading-text">Cargando Invitación...</h1>
+        
+        <p class="greeting-preamble">ESTÁS INVITADO/A A CELEBRAR CONMIGO MIS...</p>
+
+        <div id="age-container">
+            <span id="age">26</span>
+        </div>
+        <div id="name-banner-container">
+            <span id="name-banner">ALONSO CONTRERAS</span>
+        </div>
+
+        <div id="event-info">
+            <p>DICIEMBRE - SÁBADO</p> <p class="date-number">13</p> <p class="time-container"><span id="event-hour">--:-- PM</span></p> 
+            
+            <p class="year">2025</p> </div>
+
+        <div id="countdown" class="countdown-style"></div>
+
+        <div id="location-box">
+            <a href="https://maps.app.goo.gl/4dZMeU6Tmdj8Tsyq6" id="location-link" target="_blank">
+                <span class="map-icon">📍</span> 
+                <p>DA CLICK AQUÍ PARA OBTENER LA UBICACIÓN</p>
+                <p class="address-line">Galáctica #7A Villa Satélite Calera C.P: 72564 Puebla de Zaragoza, Pue.</p>
+            </a>
+        </div>
+        
+        <div id="messages-section">
+            <p id="event-message" class="main-message"></p>
+            
+            <p id="amenities-message" class="amenities-message"></p>
+            
+            <p class="bring-your-own">FAVOR DE TRAER LO QUE VAYAN A TOMAR</p>
+
+            <p class="extra-guests-notice">
+                PUEDES INVITAR A MÁS PERSONAS, SOLO FAVOR DE AVISARME POR WHATSAPP PARA CONTEMPLAR LO DE LOS TACOS
+            </p>
+
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="assets/audio/fiesta.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/countdown.js"></script>
+</body>
+</html>
