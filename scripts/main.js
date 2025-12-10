@@ -64,7 +64,7 @@ const EVENT_DETAILS = {
     },
     // Detalles para la fiesta de la noche (9:00 PM) - Fiesta principal
     noche: {
-        hour_text: "7:00 PM",
+        hour_text: "6:00 PM",
         // Formato: AAAA-MM-DDTHH:MM:SS
         full_date: "2025-12-13T21:00:00", 
         message: "Prepárate para la fiesta!!!",
