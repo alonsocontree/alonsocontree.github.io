@@ -58,7 +58,7 @@ const EVENT_DETAILS = {
         hour_text: "4:00 PM",
         // Formato: AAAA-MM-DDTHH:MM:SS
         full_date: "2025-12-13T16:00:00", 
-        message: "¡Menú especial! Estás invitado/a a comer ELOTES ASADOS. En caso de no poder asistir a las 4:00 PM, a las 7:00 PM iniciaremos la fiesta.",
+        message: "¡Menú especial! Estás invitado/a a comer ELOTES ASADOS. En caso de no poder asistir a las 4:00 PM, a las 6:00 PM iniciaremos la fiesta.",
         amenities: "Habrá tacos, DJ, mucho baile y piñata.", // Mensaje extra para las amenidades
         theme_class: "fiesta-tarde" // Clase CSS para el tema visual
     },
