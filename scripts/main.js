@@ -66,7 +66,7 @@ const EVENT_DETAILS = {
     noche: {
         hour_text: "6:00 PM",
         // Formato: AAAA-MM-DDTHH:MM:SS
-        full_date: "2025-12-13T21:00:00", 
+        full_date: "2025-12-13T18:00:00", 
         message: "Prepárate para la fiesta!!!",
         amenities: "Habrá tacos, DJ, mucho baile y piñata.", // Mensaje extra para las amenidades
         theme_class: "fiesta-noche" // Clase CSS para el tema visual
